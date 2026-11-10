@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Timetable & Resource Scheduling Management System</title>
+    <meta name="description" content="Enterprise Academic Timetable and Resource Scheduling Management System with native PostgreSQL database integration, full Faculty Management CRUD, and conflict resolution engine." />
+    <meta property="og:title" content="Smart Timetable & Resource Scheduling Management System" />
+    <meta property="og:description" content="Enterprise Academic Timetable and Resource Scheduling Management System with native PostgreSQL database integration, full Faculty Management CRUD, and conflict resolution engine." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Ensure window.fetch is configurable and writable for testing extensions
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return currentFetch; },
+            set: function(fn) { currentFetch = fn; },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // ignore if already non-configurable
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
